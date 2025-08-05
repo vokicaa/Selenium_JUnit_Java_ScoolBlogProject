@@ -7,10 +7,6 @@ public class ImagePaths{
 	public static final String Unimportant="/Users/mymac/Desktop/Voki_workplace/Final project Ivona 2/FinalExamProject/src/tests/images/unimportant.png";
 	public static final String New = "/Users/mymac/Desktop/Voki_workplace/Final project Ivona 2/FinalExamProject/src/tests/images/news-01.png";
 	
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
-	}
+	
 	
 }

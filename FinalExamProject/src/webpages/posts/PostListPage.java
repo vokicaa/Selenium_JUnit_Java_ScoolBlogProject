@@ -464,6 +464,7 @@ public class PostListPage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
 		WebElement scrollRight = driver.findElement(By.xpath("//tbody[1]/tr[1]/td[12]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView()", scrollRight);
 		try {
@@ -471,9 +472,12 @@ public class PostListPage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Skrol desno pre klika za brisanje."); //checking 
 		weDeleteDialog.click();
+		System.out.println("Dijalog za brisanje click"); //checking 
 		driverWait.until(ExpectedConditions.visibilityOf(weDeletePost));
 		weDeletePost.click();
+		System.out.println("Post obrisan."); //checking 
 	}
 
 	public void deletePost(String postName) {
@@ -486,14 +490,14 @@ public class PostListPage {
 		}
 		Select show100Posts = new Select(weSelectNumberOfPosts);
 		show100Posts.selectByValue("100");
-		System.out.println("Prikaz 100 postova");
+		System.out.println("Prikaz 100 postova"); //checking 
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		WebElement scrollRight = driver.findElement(By.xpath("//tbody[1]/tr[1]/td[12]"));
-		System.out.println("Skrol desno");
+		System.out.println("Skrol desno"); //checking 
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView()", scrollRight);
 		try {
 			Thread.sleep(2000);
@@ -502,12 +506,12 @@ public class PostListPage {
 		}
 		WebElement weDeletePostButton = driver.findElement(
 				By.xpath("//td[5][text()='" + postName + "']/following-sibling::td[7]//child::div//child::button[1]"));
-		System.out.println("Delete dijalog je lociran");
+		System.out.println("Delete dijalog je lociran"); //checking 
 		weDeletePostButton.click();
-		System.out.println("Delete dijalog kliknut ");
+		System.out.println("Delete dijalog kliknut "); //checking 
 		driverWait.until(ExpectedConditions.visibilityOf(weDeletePost));
-		System.out.println("Cekamo dijalog za brisanje");
+		System.out.println("Cekamo dijalog za brisanje"); //checking 
 		weDeletePost.click();
-		System.out.println("Post obrisan");
+		System.out.println("Post obrisan"); //checking 
 	}
 }

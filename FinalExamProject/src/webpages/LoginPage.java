@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+	
 	private WebDriver driver;
 	private static final String PAGE_URL = "http://testblog.kurs-qa.cubes.edu.rs/login";
 
